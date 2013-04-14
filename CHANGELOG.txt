@@ -1,0 +1,112 @@
+4.21:
+- Fixed rcon permission issue
+
+4.2:
+- Using bukkit default ban/ipban list for some commands
+- Add cancellable IPBanEvent and IPBannedEvent
+- Fixed error while ban syncing
+- Update sv-se language file ( Thanks to oggehej )
+
+4.1:
+- Added show detail previous bans message on join
+- Added sendDetailPrevBansOnJoin configuration (auto regenerate config.yml)
+- Added permission: exempt from kicks (mcbans.kick.exempt)
+- Auto regenerate missing locale files on /mcbans reload
+- Fixed language file warning
+- Fixed remaining time format
+- Fixed ban sync
+
+4.0:
+- Added NoCheatPlus, AntiCheat data sending to mcbans
+- Added MCBansAPI class for other plugin integration
+- Added support Vault provides other permission plugin
+- Added API key valid check
+- Added player name valid check
+- Added config file version check (Auto recreate config.yml as necessary)
+- Added more localizable messages
+- Added timeout configuration
+- Added failsafe configuration
+- Added player lookup API
+- Added ban lookup command/API
+- Added support colored messages (color/format code: &<char>)
+- Added mcbans.hideview permission (hide view alts/previous bans on connect)
+- Added altlookup command for premium servers
+- Added banip command for bans an IP address (Unban with /unban <IP>)
+- Rewrited permission structure and permission node
+- Rewrited command structure
+- Rewrited localize structure
+- Rewrited logging structure
+- Rewrited configuration structure (Change settings.yml to config.yml)
+- Fixed enableMaxAlts configuration not working
+- Fixed minor exception while player joining the server
+- Fixed sync ban at the incorrect interval
+- Fixed syncBans configuration not working (Moved to enableAutoSync config)
+- Fixed tempban w(week) parameter not working
+- Fixed onJoinMCBansMessage configuration not working
+- Fixed kicking wrong player
+
+3.9 R1 DIAMOND:
+- Added Rollback for; CoreProtect, Hawkeye, LogBlock.
+- Added "/mcbans sync all" to force a resync
+- Added throttling to syncing/callback
+- Added Events for plugin actions
+- Removed second call to mcbans API (performance increase)
+- Removed NoCheatPlus data sending to mcbans (may return)
+- Removed Logblock data sent to mcbans
+- Fixed mcbans get call/sync to proper times to next action
+
+3.8 R3:
+- Sync race condition fixed
+- (Alpha) Banning when MCBans is down
+- Fixed async login
+
+3.8 R2:
+- Added sync system ( uses banned-players.txt )
+- Added new mcbans commands
+- Added API Server selecter (no longer multiple jars)
+- Added response time checks
+- Added proper threading on login ( Thank you Bukkit team !!! )
+- Added IP locks ( MCBans donators/premium users )
+- Added session protection ( MCBans donators/premium users )
+- Added bans viewable on login ( Global only )
+- Added caching on certain permissions
+- Added mcbans.ban.rollback
+- Added NoCheatPlus integration
+- Added Rollback bans /rban
+- Added rollback on every ban (default: disabled)
+- Added tempban to /ban
+- Added /tban, /gban
+- Fixed sync and callback threads
+- Fixed �g/mcbans get call�h showing negative time.
+- Fixed �g/mcbans sync�h to the permission �gmcbans.admin�h
+- Fixed �g/mcbans get call/sync�h to the permission �gmcbans.admin�h
+- Removed backup system
+- Removed Connection Throttle
+- Removed core.yml
+- Removed language files from mcbans folder
+- Removed downloader (used to grab settings files and language files)
+- Removed ban flags
+
+3.8 R1:
+- Added sync system ( uses banned-players.txt )
+- Added new mcbans commands
+- Added API Server selecter (no longer multiple jars)
+- Added response time checks
+- Added proper threading on login ( Thank you Bukkit team !!! )
+- Added IP locks ( MCBans donators/premium users )
+- Added session protection ( MCBans donators/premium users )
+- Added bans viewable on login ( Global only )
+- Added caching on certain permissions
+- Removed backup system
+- Removed Connection Throttle
+- Removed core.yml
+- Removed language files from mcbans folder
+- Removed downloader (used to grab settings files and language files)
+
+3.7 Stable:
+- Fixed Threading
+- Fixed Settings Download + Language
+- Added mcbans.kick.view (Node allows players (or group) to see when an admin kicks a player)
+- Added mcbans.alts.view (Node allows players (or group) to see alts of a player when they join)
+- Added mcbans.alts.hide (Node adds players (or group) to "ignore" alt account list viewing when this they join the server).
+- R4-R5+ compatible
