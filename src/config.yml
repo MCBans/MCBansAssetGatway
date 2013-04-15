@@ -53,6 +53,12 @@ autoBan:
     minRep: false
     maxAlts: false
 
+# banPlugin:
+#   Select from: bukkit, essentials
+#   Support essentials plugin for save ban reasons
+#   DEFAULT: bukkit
+autoBanPlugin: bukkit 
+
 #########################################################
 # Loging and Debug
 #   Debugging and MCBans message logging settings

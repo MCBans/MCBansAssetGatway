@@ -310,15 +310,20 @@ public class PlayerListener implements Listener {
                 }
                 
                 if (addBan) {
-                    if (p != null && p.isOnline()){
-                        p.setBanned(true);
-                    }else{
-                        OfflinePlayer target = Bukkit.getOfflinePlayer(name);
-                        if (target != null){
-                            target.setBanned(true);
-                        }
+                    if (config.getAutoBanPlugin().equalsIgnoreCase("essentials")){
+                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "eban " + name + " " + reason);
                     }
-                    log.info("Added " + name + " to bukkit ban list. (" + reason + ")");
+                    else{
+                        if (p != null && p.isOnline()){
+                            p.setBanned(true);
+                        }else{
+                            OfflinePlayer target = Bukkit.getOfflinePlayer(name);
+                            if (target != null){
+                                target.setBanned(true);
+                            }
+                        }
+                        log.info("Added " + name + " to bukkit ban list. (" + reason + ")");
+                    }
                 }
             }
         });

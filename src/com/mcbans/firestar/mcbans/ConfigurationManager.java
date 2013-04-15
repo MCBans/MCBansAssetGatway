@@ -158,6 +158,10 @@ public class ConfigurationManager {
     public boolean autoBanAlts(){
         return conf.getBoolean("autoBan.maxAlts", false);
     }
+    
+    public String getAutoBanPlugin(){
+        return conf.getString("autoBanPlugin", "bukkit");
+    }
     /* ***** */
 
     public boolean isDebug(){

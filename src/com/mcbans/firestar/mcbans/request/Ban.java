@@ -392,11 +392,19 @@ public class Ban implements Runnable {
         }
         
         if (flag){
+            // Banning player
+            if (plugin.getConfigs().getAutoBanPlugin().equalsIgnoreCase("essentials")){
+                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "eban " + playerName + " " + reason);
+            }
             if (!target.isBanned()){
                 target.setBanned(true);
                 this.kickPlayer(playerName, _("localBanPlayer", I18n.PLAYER, playerName, I18n.SENDER, senderName, I18n.REASON, reason, I18n.IP, playerIP));
             }
         }else{
+            // Unbanning player
+            if (plugin.getConfigs().getAutoBanPlugin().equalsIgnoreCase("essentials")){
+                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "eban " + playerName + " " + reason);
+            }
             if (target.isBanned()){
                 target.setBanned(false);
             }
